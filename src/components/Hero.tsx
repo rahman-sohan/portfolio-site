@@ -3,6 +3,9 @@ import { profile } from '../data/portfolio'
 export default function Hero() {
   return (
     <section id="top" className="hero-section">
+      <div className="hero-visual" aria-hidden="true">
+        <img className="hero-img" src="/imgi_4_night.webp" alt="" loading="eager" decoding="async" draggable={false} />
+      </div>
       <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-content">
         <p className="eyebrow"><span aria-hidden="true">✦</span> The backend engineer</p>
