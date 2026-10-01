@@ -1,5 +1,28 @@
+import { useState } from 'react'
 import SectionHeading from './SectionHeading'
 import { jobs } from '../data/portfolio'
+
+function domainOf(url: string) {
+  return new URL(url).hostname.replace(/^www\./, '')
+}
+
+function LogoChip({ src, name }: { src: string; name: string }) {
+  const [failed, setFailed] = useState(false)
+  return (
+    <div className="flex h-12 shrink-0 items-center justify-center rounded-md bg-white px-2.5">
+      {failed ? (
+        <span className="font-mono text-lg font-semibold text-ink">{name.charAt(0)}</span>
+      ) : (
+        <img
+          src={src}
+          alt={`${name} logo`}
+          className="h-6 w-auto max-w-[120px] object-contain"
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  )
+}
 
 export default function Work() {
   return (
@@ -29,16 +52,19 @@ export default function Work() {
               {job.role} · {job.type} · {job.location}
             </p>
 
-            <h3 className="mt-3 text-2xl font-semibold sm:text-3xl">
-              <a
-                href={job.url}
-                target="_blank"
-                rel="noreferrer"
-                className="underline decoration-line decoration-2 underline-offset-8 transition-colors hover:decoration-fg"
-              >
-                {job.company}
-              </a>
-            </h3>
+            <div className="mt-4 flex items-center gap-4">
+              <LogoChip src={job.logo} name={job.company} />
+              <h3 className="text-2xl font-semibold sm:text-3xl">
+                <a
+                  href={job.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline decoration-line decoration-2 underline-offset-8 transition-colors hover:decoration-fg"
+                >
+                  {job.company}
+                </a>
+              </h3>
+            </div>
 
             <p className="mt-3 italic text-muted">“{job.blurb}”</p>
 
@@ -52,6 +78,20 @@ export default function Work() {
             </ul>
 
             <p className="mt-6 font-mono text-xs text-faint">{job.tech.join(' · ')}</p>
+
+            {(() => {
+              const visitUrl = job.productUrl ?? job.url
+              return (
+                <a
+                  href={visitUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex font-mono text-sm underline decoration-line underline-offset-4 transition-colors hover:text-fg hover:decoration-fg"
+                >
+                  {job.productUrl ? 'Product I worked on:' : 'Visit'} {domainOf(visitUrl)} →
+                </a>
+              )
+            })()}
           </article>
         ))}
       </div>

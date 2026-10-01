@@ -16,6 +16,8 @@ export const socials = {
 export type Job = {
   company: string
   url: string
+  productUrl?: string
+  logo: string
   role: string
   type: string
   period: string
@@ -29,6 +31,7 @@ export const jobs: Job[] = [
   {
     company: 'Walima Ltd (Durbin Inspiring Limited)',
     url: 'https://walima.app',
+    logo: '/logos/logo.svg',
     role: 'Software Engineer',
     type: 'Hybrid',
     period: 'Jul 2025 – Present',
@@ -45,6 +48,7 @@ export const jobs: Job[] = [
   {
     company: 'Sharetrip Ltd.',
     url: 'https://sharetrip.net',
+    logo: '/logos/sharetrip.png',
     role: 'Software Engineer',
     type: 'On-site',
     period: 'Apr 2023 – Apr 2025',
@@ -60,7 +64,9 @@ export const jobs: Job[] = [
   },
   {
     company: 'ScaleBridger Corp.',
-    url: 'https://www.trps.com',
+    url: 'https://scalebridger.com',
+    productUrl: 'https://www.trps.com',
+    logo: '/logos/scalebridger.png',
     role: 'Backend (TypeScript) Developer',
     type: 'Part-time',
     period: 'Apr 2025 – Mar 2026',

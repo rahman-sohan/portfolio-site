@@ -1,37 +1,13 @@
-import { GREETINGS, TIME_KEYS, type TimeKey } from '../time'
 import { profile } from '../data/portfolio'
 
-type HeroProps = {
-  time: TimeKey
-  onTimeChange: (time: TimeKey) => void
-}
-
-export default function Hero({ time, onTimeChange }: HeroProps) {
+export default function Hero() {
   return (
     <section id="top" className="flex min-h-[88vh] flex-col justify-center py-24">
       <p className="font-mono text-[11px] uppercase tracking-[0.22em] text-faint sm:text-xs">
         {profile.name} · {profile.title} · {profile.location}
       </p>
 
-      <div className="mt-6 flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs uppercase tracking-widest">
-        {TIME_KEYS.map((key) => (
-          <button
-            key={key}
-            type="button"
-            onClick={() => onTimeChange(key)}
-            className={
-              key === time
-                ? 'text-fg underline decoration-2 underline-offset-8'
-                : 'text-faint transition-colors hover:text-muted'
-            }
-          >
-            {key}
-          </button>
-        ))}
-      </div>
-
-      <p className="mt-10 font-mono text-sm text-muted">{GREETINGS[time]}</p>
-      <h1 className="mt-3 text-5xl font-semibold leading-[1.05] tracking-tight sm:text-7xl">
+      <h1 className="mt-10 text-5xl font-semibold leading-[1.05] tracking-tight sm:text-7xl">
         I build
         <br />
         scalable backends.
