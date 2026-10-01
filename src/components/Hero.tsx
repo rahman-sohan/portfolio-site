@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="hero-overlay" aria-hidden="true" />
       <div className="hero-content">
         <p className="eyebrow"><span aria-hidden="true">✦</span> Backend engineer · Node.js &amp; TypeScript</p>
-        <h1>I build the half of the product<br />you never see.</h1>
+        <h1>I build the invisible engine.</h1>
         <p className="hero-copy">
           Node.js, NestJS, and data pipelines — quietly doing their job at 3 a.m. so your users never notice.
         </p>
