@@ -103,10 +103,21 @@ export const skillGroups = [
 export const exploring =
   'pgvector semantic search at scale · event-driven pipelines (BullMQ, RabbitMQ) · multi-tenant architecture · AWS & Azure deployments.'
 
+export const exploringItems = [
+  {
+    label: 'Learning',
+    text: 'Go, Rust, Python — plus data structures, algorithms, and machine learning.',
+  },
+  {
+    label: 'Exploring',
+    text: 'Web automation at scale — distributed scraping, scheduling, and data pipelines behind authenticated pages.',
+  },
+]
+
 export const highlights = [
   {
     label: 'Problem Solving',
-    text: '500+ programming problems solved across LeetCode and LightOJ; regular contests on Codeforces and vjudge.',
+    text: '1000+ programming problems solved across LeetCode and LightOJ; regular contests on Codeforces and vjudge.',
   },
   {
     label: 'Award',

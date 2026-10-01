@@ -28,7 +28,7 @@ export default function Work() {
   return (
     <section id="work" className="border-t border-line py-24">
       <SectionHeading
-        index="01"
+        index="02"
         label="Work"
         title={
           <>

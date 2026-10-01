@@ -5,7 +5,7 @@ export default function Now() {
   return (
     <section id="now" className="border-t border-line py-24">
       <SectionHeading
-        index="02"
+        index="04"
         label="Now"
         title={
           <>

@@ -1,4 +1,5 @@
 import Education from './components/Education'
+import Exploring from './components/Exploring'
 import Footer from './components/Footer'
 import Hero from './components/Hero'
 import Now from './components/Now'
@@ -44,9 +45,10 @@ export default function App() {
       <main>
         <Hero />
         <div className="page-content">
-          <Work />
-          <Now />
           <Education />
+          <Work />
+          <Exploring />
+          <Now />
           <Footer />
         </div>
       </main>

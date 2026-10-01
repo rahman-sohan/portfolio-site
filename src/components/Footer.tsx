@@ -1,4 +1,4 @@
-import { profile, socials } from '../data/portfolio'
+import { profile, socials } from "../data/portfolio";
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
         </h2>
         <a
           href={socials.email}
-          className="mt-8 inline-block rounded-md bg-fg px-5 py-3 font-mono text-sm font-medium text-ink transition hover:opacity-90"
+          className="mt-8 inline-block rounded-md !bg-[#ffffff] px-5 py-3 font-mono text-sm font-medium !text-[#0a0a0a] transition hover:opacity-90"
         >
           Let's talk.
         </a>
@@ -24,21 +24,37 @@ export default function Footer() {
             </p>
           </div>
           <nav className="flex gap-6 font-mono text-sm">
-            <a href={socials.github} target="_blank" rel="noreferrer" className="text-muted transition-colors hover:text-fg">
+            <a
+              href={socials.github}
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted transition-colors hover:text-fg"
+            >
               GitHub
             </a>
-            <a href={socials.linkedin} target="_blank" rel="noreferrer" className="text-muted transition-colors hover:text-fg">
+            <a
+              href={socials.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="text-muted transition-colors hover:text-fg"
+            >
               LinkedIn
             </a>
-            <a href={socials.email} className="text-muted transition-colors hover:text-fg">
+            <a
+              href={socials.email}
+              className="text-muted transition-colors hover:text-fg"
+            >
               Email
             </a>
           </nav>
         </div>
-        <a href="#top" className="mt-10 inline-block font-mono text-xs text-faint transition-colors hover:text-fg">
+        <a
+          href="#top"
+          className="mt-10 inline-block font-mono text-xs text-faint transition-colors hover:text-fg"
+        >
           Back to top ↑
         </a>
       </footer>
     </>
-  )
+  );
 }

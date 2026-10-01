@@ -5,7 +5,7 @@ export default function Education() {
   return (
     <section id="education" className="border-t border-line py-24">
       <SectionHeading
-        index="03"
+        index="01"
         label="Education"
         title={
           <>
@@ -16,7 +16,7 @@ export default function Education() {
         }
       />
 
-      <article className="mt-16">
+      <article className="mt-12 rounded-lg border border-line border-l-4 border-l-accent p-8 sm:p-10">
         <span className="font-mono text-sm text-faint">01</span>
         <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
           Undergraduate · {education.location}
